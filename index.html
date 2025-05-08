@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio - Syahrul Majid Widayanto</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(90deg, #0d47a1, #1976d2);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            animation: slideDown 0.5s ease-out;
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 10px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #bbdefb;
+        }
+
+        section {
+            padding: 60px 20px;
+            max-width: 1000px;
+            margin: auto;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+
+        section:nth-of-type(2) {
+            animation-delay: 0.2s;
+        }
+
+        section:nth-of-type(3) {
+            animation-delay: 0.4s;
+        }
+
+        section:nth-of-type(4) {
+            animation-delay: 0.6s;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1, h2 {
+            margin-bottom: 20px;
+            color: #0d47a1;
+        }
+
+        .portfolio-item {
+            background: white;
+            padding: 20px;
+            border-left: 5px solid #1976d2;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 5px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin: 10px 0 5px;
+        }
+
+        input, textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 10px;
+            background-color: #1976d2;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0d47a1;
+        }
+
+        footer {
+            background-color: #0d47a1;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        footer ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 0;
+            margin-top: 10px;
+        }
+
+        footer ul li {
+            margin: 0 10px;
+        }
+
+        footer ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .contact-info {
+            margin-top: 20px;
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            .portfolio-item {
+                padding: 15px;
+            }
+            button {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h1>Selamat datang di Portofolio saya!</h1>
+        <p>Nama saya Syahrul Majid Widayanto, saya seorang mahasiswa Universitas Muria Kudus Prodi Teknik Industri dan bekerja yang berfokus pada Pengembangan Teknologi, Industrial Engineering, Electrical Engineering. Saya sangat antusias terhadap pengembangan teknologi dan solusi berbasis data.</p>
+    </section>
+
+    <section id="about">
+        <h2>Tentang Saya</h2>
+        <p>Saya adalah seorang mahasiswa Teknik Industri dengan minat besar pada teknologi digital dan pengembangan sistem. Selain aktif dalam dunia perkuliahan, saya juga terlibat dalam berbagai proyek teknologi baik secara individu maupun dalam tim profesional. Saya percaya bahwa perpaduan antara pengetahuan teknik industri dan keterampilan teknologi dapat menciptakan solusi inovatif untuk berbagai permasalahan dalam dunia kerja.</p>
+        <p>Saya memiliki pengalaman dalam membangun sistem informasi, analisis data, automasi proses, hingga pembuatan dashboard visualisasi untuk membantu proses pengambilan keputusan yang cepat dan akurat.</p>
+    </section>
+
+    <section id="portfolio">
+        <h2>Portofolio</h2>
+        <div class="portfolio-item">
+            <h3>Proyek 1: Sistem Informasi Manajemen Produksi</h3>
+            <p>Mengembangkan sistem informasi berbasis web untuk pengelolaan data produksi perusahaan manufaktur skala menengah. Dibuat dengan PHP dan MySQL, meningkatkan efisiensi pelaporan 40%.</p>
+        </div>
+        <div class="portfolio-item">
+            <h3>Proyek 2: Dashboard Analisis Data Kinerja Produksi</h3>
+            <p>Menggunakan Microsoft Power BI untuk visualisasi real-time data kinerja produksi: efisiensi lini, downtime mesin, dan rasio hasil cacat. Membantu manajemen mengambil keputusan lebih cepat dan akurat.</p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Keahlian</h2>
+        <ul>
+            <li>Pengembangan Web (HTML, CSS, JavaScript, PHP, Laravel)</li>
+            <li>Database (MySQL, Firebase)</li>
+            <li>Analisis Data (Microsoft Excel, Power BI, Python untuk analisis data)</li>
+            <li>Desain UI/UX (Figma, Canva)</li>
+            <li>Automasi Sistem Produksi dan Proses Industri</li>
+            <li>Manajemen Proyek dan Optimasi Proses</li>
+            <li>Bahasa Pemrograman: Python, C++, SQL</li>
+        </ul>
+    </section>
+
+    <section id="experience">
+        <h2>Pengalaman</h2>
+        <div class="portfolio-item">
+            <h3>PT Misaja Mitra (2024 - Sekarang)</h3>
+            <p>Penelitian Skripsi, Analis pengendalian bahan baku di PT Misaja Mitra Menggunakan sistem Just In Time</p>
+        </div>
+        <div class="portfolio-item">
+            <h3>Kepala Bagian Line Produksi di PT Hartono Istana Teknologi (2022)</h3>
+            <p>Selama masa magang di PT Hartono Istana Teknologi (Polytron), saya ditempatkan di departemen produksi pada Line LED. Fokus utama dari kegiatan magang ini adalah melakukan observasi dan analisis terhadap proses produksi lampu LED, dengan tujuan utama meningkatkan kapasitas output harian tanpa menambah jumlah tenaga kerja atau jam kerja.</p>
+        </div>
+        <div class="portfolio-item">
+            <h3>QC Produksi di Kanindo (2023)</h3>
+            <p>Selama masa kerja di PT Kanindo, saya ditempatkan di Quality Control Produksi Tas. Fokus utama dari kegiatan kerja ini adalah melakukan kontrol kualitas terhadap produksi Tas, dengan tujuan utama meningkatkan kualitas Produksi.</p>
+        </div>
+        <div class="portfolio-item">
+            <h3>Freelance Project Developer (2021 - Sekarang)</h3>
+            <p>Saya juga mengerjakan proyek freelance seperti pembuatan website portofolio, aplikasi inventaris sederhana, dan dashboard analisis menggunakan Power BI untuk UMKM dan instansi pendidikan.</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Kontak</h2>
+        <p>Jika Anda ingin bekerja sama atau sekadar menyapa, hubungi saya melalui formulir atau email langsung.</p>
+        <form action="mailto:syahrulmajid144@gmail.com" method="POST" enctype="text/plain">
+            <label for="name">Nama</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Pesan</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Kirim</button>
+        </form>
+
+        <div class="contact-info">
+            <p><strong>Nama:</strong> Syahrul Majid Widayanto</p>
+            <p><strong>Email:</strong> <a href="mailto:syahrulmajid144@gmail.com">syahrulmajid144@gmail.com</a></p>
+            <p><strong>WhatsApp:</strong> 087731941406</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>Follow me on:</p>
+        <ul>
+            <li><a href="https://www.linkedin.com/in/SyahrulMajidWidayanto">LinkedIn</a></li>
+            <li><a href="https://www.instagram.com/SyahrulMajidWidayanto">Instagram</a></li>
+            <li><a href="https://github.com/SyahrulMajidWidayanto">GitHub</a></li>
+        </ul>
+    </footer>
+</body>
+</html>
